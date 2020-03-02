@@ -32,14 +32,12 @@ RAW_recipes
 
 Cuisine Data: <https://www.kaggle.com/kaggle/recipe-ingredients-dataset>
 
-![](media/a95550199199f6b693bc470859171466.png)
+![](Images1/EDA1.png )
 
 Food.com boasts a veritable smorgasbord of over 500,000 recipes and a
 community-inspired activity feed that allows users to share reviews.
 
-![](media/8b54a4168e7f467e90ca65f75eff5054.png)
-
-![](media/69c3fe8c793c3f3467703eb1c28860b0.png)
+![](Images1/Food.png)
 
 #### **Clean the data**
 
@@ -55,12 +53,18 @@ python rather than list objects.
 
 **EDA**
 
-![](media/16e81b7d7e997a438b52843a4fbe99b6.png)
 
 **There are many outliers in many columns of the data. I removed them using
 IQR**
+![](Images1/EDA3.png)
 
-![](media/bad48cc088e2a6b826c795becfec41ae.png)
+
+
+![](Images1/EDA4.png)
+
+
+
+
 
 **Removed the missing values from the data by dropping the rows containing any
 missing values.**
@@ -69,7 +73,7 @@ missing values.**
 
 #### Engineer features[¶](https://render.githubusercontent.com/view/ipynb?commit=50fc6e8ca74ddd6eaab89ab485755aa44ffd357a&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f746a656e672f73616c6172792f353066633665386361373464646436656161623839616234383537353561613434666664333537612f73616c6172792e6970796e62&nwo=tjeng%2Fsalary&path=salary.ipynb&repository_id=239641474&repository_type=Repository#7.-Engineer-features)
 
-Feature Engineering Cuisine
+**Feature Engineering Cuisine**
 
 -   It would be very helpful if we know which cuisine a recipe belongs to. So
     that we can further analyze things like which cuisine have more positive
@@ -83,7 +87,8 @@ Feature Engineering Cuisine
 
 **The data looks like,**
 
-![](media/f14ccc0a5506ba0900ffb4053321dd65.png)
+
+![](Images1/EDA5.png)
 
 As we are dealing with textual data, we must vectorize ingredients text.
 
@@ -108,7 +113,7 @@ Sentiment Classification
 
 As we are dealing with review text, we must preprocess it before vectorizing.
 
-Text Preprocessing
+**Text Preprocessing**
 
 In the Text Preprocessing phase, we do the following in the order below: -
 
@@ -128,10 +133,13 @@ In the Text Preprocessing phase, we do the following in the order below: -
 
 7.  Finally, Snowball Stemming the word (it was observed to be better than
     Porter Stemming) and lemmatizing the words.
+    
+    
+![](Images1/EDA6.png)
 
-![](media/06ca4c24dede0ecdfab59dd7b1ef25ff.png)
 
 Now the review text is preprocessed and ready for modeling!
+
 
 1.  We will first divide the dataset into Test Train sets and perform under
     sampling only on the majority class of train set.
@@ -147,7 +155,7 @@ Featurization & Sentiment Classification
 -   TF-IDF vectorizer with naïve Bayes gave the best AUC score of 79.5% in
     classifying sentiment of reviews.
 
-    ![](media/bed2f2770d73bece6e01cd731dc9afe0.png)
+    ![](Images1/EDA7.png)
 
 We can further dive deep into this and we will see if we can find some
 interesting answers to questions like what king of recipes are rated high?
@@ -155,14 +163,12 @@ interesting answers to questions like what king of recipes are rated high?
 Clustering to Dig deep into recipe ratings
 ==========================================
 
-I have clustered data points using the ingredients data to see if we I can find any interesting patterns in those clusters
-==========================================================================================================================
+**I have clustered data points using the ingredients data to see if we I can find any interesting patterns in those clusters**
+
 
 I decided on no of clusters using Inertia and silhouette score analysis.
 
-![](media/ad6fb44d5a8a41c62f40a6b7b34d9b7e.png)
-
-![](media/11cb8e9ea5fc86547a03a1d1794aa2c3.png)
+  ![](Images1/EDA8.png)
 
 From the above graph, I’ve decided that the 5 is the most optimal value for K.
 
@@ -188,11 +194,22 @@ Market Basket Analysis on Ingredients using Apriori
 5.  I tried many parameter values of Support, Confidence and Lift for apriori
     model. I've selected min_support to be 0.0060, min_confidence=0.6,
     min_lift=3 as desired values for our Apriori algorithm.
-
+    
+    
 Below are some of the top rules given by apriori algorithm
-==========================================================
+===================================================
 
-[./media/image11.png](./media/image11.png)
-==========================================
+![](Images1/Results9.png)
 
-![](media/64935b1de9d45931cd43c987cd0fa84b.png)
+
+### Part 4 - Deploy solution
+
+We will save the predictions in a pickle file so that it can be used to deploy in any environment for easy predictions.
+
+Currently I'm working on building a web flask app to predic the polarity given the review.
+
+
+Please check the below notebook for details:https://github.com/kbpavan/Text-Analytics-on-Food.com-Recipes-Review-Data-/blob/master/Copy_of_Food.ipynb
+
+
+
