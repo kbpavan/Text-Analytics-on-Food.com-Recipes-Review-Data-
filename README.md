@@ -1,6 +1,11 @@
-**Text Analytics on Food.com Recipes/Review Data**
+Text Analytics on Food.com Recipes/Review Data
+===================================================
 
-### Part 1 - DEFINE
+
+
+Part 1 - DEFINE
+===================================================
+
 
 #### **Define the problem**
 
@@ -20,7 +25,8 @@ who like to try new recipes and people who like to make new recipes.
 
 4.  **Market Basket Analysis** on Ingredients data to increase revenue
 
-### Part 2 – DISCOVER
+Part 2 – DISCOVER
+===================================================
 
 The data is from following Kaggle sources
 
@@ -69,7 +75,8 @@ IQR**
 **Removed the missing values from the data by dropping the rows containing any
 missing values.**
 
-### Part 3 - DEVELOP
+Part 3 - DEVELOP
+===================================================
 
 #### Engineer features[¶](https://render.githubusercontent.com/view/ipynb?commit=50fc6e8ca74ddd6eaab89ab485755aa44ffd357a&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f746a656e672f73616c6172792f353066633665386361373464646436656161623839616234383537353561613434666664333537612f73616c6172792e6970796e62&nwo=tjeng%2Fsalary&path=salary.ipynb&repository_id=239641474&repository_type=Repository#7.-Engineer-features)
 
@@ -196,8 +203,8 @@ Market Basket Analysis on Ingredients using Apriori
     min_lift=3 as desired values for our Apriori algorithm.
     
     
-Below are some of the top rules given by apriori algorithm
-===================================================
+**Below are some of the top rules given by apriori algorithm**
+
 
 ![](Images1/Results9.png)
 
