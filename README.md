@@ -1,7 +1,9 @@
 **Text Analytics on Food.com Recipes/Review Data**
 ============================================================================================
-### Part 1 - DEFINE
+
+**Part 1 - DEFINE**
 ============================================================================================
+
 #### **Define the problem**
 
 Food.com is a place where you can find recipes and reviews for that recipes
@@ -25,7 +27,7 @@ who like to try new recipes and people who like to make new recipes.
 5.  **Market Basket Analysis** using **Apriori** algorithm on Ingredients data
     to find **associations between products** in cart and increase revenue.
 
-### Part 2 – DISCOVER
+**Part 2 – DISCOVER**
 ============================================================================================
 The data is from following Kaggle sources
 
@@ -75,7 +77,7 @@ missing values.**
 
 ![](media/11115ce176314aa43910f632f0a11363.png)
 
-### Part 3 - DEVELOP
+**Part 3 - DEVELOP**
 ============================================================================================
 **Engineer features**
 
