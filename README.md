@@ -223,7 +223,9 @@ Featurization & Sentiment Classification
     78.5% in classifying sentiment of reviews.**
 
     ![](media/bed2f2770d73bece6e01cd731dc9afe0.png)
-
+    
+**Part 4 - DEPLOY**
+============================================================================================
 **Predictive Modelling**
 ========================
 
