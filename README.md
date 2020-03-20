@@ -1,7 +1,7 @@
 **Text Analytics on Food.com Recipes/Review Data**
-
+============================================================================================
 ### Part 1 - DEFINE
-
+============================================================================================
 #### **Define the problem**
 
 Food.com is a place where you can find recipes and reviews for that recipes
@@ -26,7 +26,7 @@ who like to try new recipes and people who like to make new recipes.
     to find **associations between products** in cart and increase revenue.
 
 ### Part 2 – DISCOVER
-
+============================================================================================
 The data is from following Kaggle sources
 
 RAW_interactions
@@ -76,7 +76,7 @@ missing values.**
 ![](media/11115ce176314aa43910f632f0a11363.png)
 
 ### Part 3 - DEVELOP
-
+============================================================================================
 **Engineer features**
 
 **Feature Engineering Cuisine**
@@ -181,8 +181,8 @@ Sentiment Classification
 
 As we are dealing with review text, we must preprocess it before vectorizing.
 
-Text Preprocessing
-
+**Text Preprocessing**
+============================================================================================
 In the Text Preprocessing phase, we do the following in the order below: -
 
 1.  Begin by removing the html tags
